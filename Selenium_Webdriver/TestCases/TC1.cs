@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SeleniumExtras.PageObjects;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
 
 namespace Selenium_Webdriver.TestCases
 {
@@ -75,16 +77,40 @@ namespace Selenium_Webdriver.TestCases
 
             //Tc3 One complete registration
 
-            IWebDriver driver = new ChromeDriver();
+            //IWebDriver driver = new ChromeDriver();
 
+            //driver.Url = "https://app.studiesweekly.com/online/";
+
+            //IWebElement reg = driver.FindElement(By.XPath("//a[@href='https://app.studiesweekly.com/online/users/register_parent']"));
+            //reg.Click();
+            ////IWebElement a = driver.FindElement(By.XPath("//input[@id='firstName'][@ng-model='user.firstName']")).SendKeys("Rati");
+            ////IWebElement b = driver.FindElement(By.XPath("//input[@id='lastName'][@name='lastname']"));
+            ////b.SendKeys("Rajan");
+            //driver.FindElement(By.Id("firstName")).SendKeys("Rati");
+
+
+            IWebDriver driver = new ChromeDriver();
             driver.Url = "https://app.studiesweekly.com/online/";
 
-            IWebElement reg = driver.FindElement(By.XPath("//a[@href='https://app.studiesweekly.com/online/users/register_parent']"));
-            reg.Click();
-            IWebElement a = driver.FindElement(By.XPath("//input[@id='firstName'][@ng-model='user.firstName']"));
-            a.SendKeys("Rati");
-            IWebElement b = driver.FindElement(By.XPath("//input[@id='lastName'][@name='lastname']"));
-            b.SendKeys("Rajan");
+            IWebElement un = driver.FindElement(By.XPath("//input[@id='username'][@class='form-control input-lg']"));
+            un.SendKeys("rati.rajan18@gmail.com");
+            IWebElement pwd = driver.FindElement(By.XPath("//input[@id='password'][@class='form-control input-lg']"));
+            pwd.SendKeys("Ringer123");
+            driver.FindElement(By.Id("loginFormSubmit")).Click();
+
+            INavigation webElement = driver.Navigate().Forward("https://app.studiesweekly.com/online/parents"); 
+
+            Assert.That(INavigation, webElement);
+
+            //var homePage = new HomePage();
+            //PageFactory.InitElements(driver, homePage);
+            //homePage.MyAccount.Click();
+
+            //var loginPage = new LoginPage();
+            //PageFactory.InitElements(driver, loginPage);
+            //loginPage.UserName.SendKeys("TestUser_1");
+            //loginPage.Password.SendKeys("Test@123");
+            //loginPage.Submit.Submit();
 
 
         }

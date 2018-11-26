@@ -9,7 +9,7 @@ using OpenQA.Selenium.Firefox;
 using NUnit.Framework;
 
 namespace Selenium_Webdriver.UnitTestCases
-    
+
 {
     class tc1_unit
     {
@@ -55,7 +55,7 @@ namespace Selenium_Webdriver.UnitTestCases
             for (var i = 0; i < 1; i++)
             {
                 clickElement.Click();
-                
+
             }
 
             /*
@@ -90,20 +90,29 @@ namespace Selenium_Webdriver.UnitTestCases
             driver.Url = "https://app.studiesweekly.com/online/";
 
         }
+
+        //TC3: Login and Assertion
+        [Test]
+
+        class void login
+        { 
+            IWebDriver driver = new ChromeDriver();
+            driver.Url = "https://app.studiesweekly.com/online/";
+
+            IWebElement un = driver.FindElement(By.XPath("//input[@id='username'][@class='form-control input-lg']"));
+            un.SendKeys("rati.rajan18@gmail.com");
+            IWebElement pwd = driver.FindElement(By.XPath("//input[@id='password'][@class='form-control input-lg']"));
+            pwd.SendKeys("Ringer123");
+            driver.FindElement(By.Id("loginFormSubmit")).Click();
+
+             INavigation webElement = driver.Navigate().Forward("https://app.studiesweekly.com/online/parents");
+
+             Assert.That(INavigation, webElement);
+
+           
+         }
+
     }
 
 
 }
-        
-
-
-
-      
-
-
-
-
-
-
-    
-
