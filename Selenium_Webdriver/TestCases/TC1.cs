@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Selenium_Webdriver
+namespace Selenium_Webdriver.TestCases
 {
-    class Program
+    class TC1
     {
-        static void Main(string[] args)
-        {
-            var i = 0;
-        }
-
+        int i = 0;
     }
 }
