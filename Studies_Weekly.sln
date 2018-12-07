@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selenium_Webdriver", "Selenium_Webdriver\Selenium_Webdriver.csproj", "{12DD01AF-4A25-44F3-8FC2-0F5A87248570}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practice", "Practice\Practice.csproj", "{423FC2AF-3FF5-4806-B253-566C8BEC14AA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{12DD01AF-4A25-44F3-8FC2-0F5A87248570}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12DD01AF-4A25-44F3-8FC2-0F5A87248570}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12DD01AF-4A25-44F3-8FC2-0F5A87248570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{423FC2AF-3FF5-4806-B253-566C8BEC14AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{423FC2AF-3FF5-4806-B253-566C8BEC14AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{423FC2AF-3FF5-4806-B253-566C8BEC14AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{423FC2AF-3FF5-4806-B253-566C8BEC14AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
